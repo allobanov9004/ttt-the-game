@@ -1,15 +1,15 @@
 from random import randrange
 
+
+
 def player_turn(field: list, crosses: list):
     turn = int(input("enter number: "))
     if turn in field:
         crosses.append(field.pop(field.index(turn)))
 
 
-
 def pc_turn(field: list, circles: list):
     circles.append(field.pop(randrange(len(field))-1))
-
 
 
 def win_condition(ttt: list) -> bool: 
